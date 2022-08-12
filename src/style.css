@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+margin-left: calc(100vw - 100%); 
+}
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: #282D35;
+}
+button {
+  margin: 1rem;
+  border: 0;
+  background: #0087cc;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+  padding: 8px 20px;
+  transition: all .1s linear;
+  width: 60%;
+}
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+.main{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: .5rem 2rem 5rem 2rem;
+}
+form{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+input{
+  width: 60%;
+  height: 4rem;
+}
+
+.submitButton{
+  background: rgb(0, 157, 0);
+  box-shadow: 0 5px 0 rgb(0, 99, 0);
+}
+.submitButton:active {
+  box-shadow: 0 2px 0 rgb(0, 99, 0);
+
+}
+.formsAndButtons{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1px;
+  padding: 1rem 0rem 5rem 2rem;
+}
+.InfoContainer{
+  height: 100vmin;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #282D35;
+}
+
+.content{
+  width: 50%;
+  border-radius: 5%;
+  box-shadow:  0px 0 20px rgb(0, 134, 134);
+  background-color: #0c0c0c;
+}
+
+.pokeName{
+  margin-bottom: 0;
+  line-height: 5rem;
+}
+
+.pokePic{
+  width: 100%;
+  border-radius: 5%;
+}
+
+.role{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #F3BF99;
+}
+
+.portfolio{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  text-align: center;
+  color: #F5F5F5;
+}
+
+.pokeNameContainer{
+  display: flex;
+  flex-flow: column;
+  justify-content:center ;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.aboutContainer{
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+  width: 70%;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #21222A;
+  height: 90px;
+  padding: 30px 25px;
+}
+
+.trackGuessBoxContainer{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #0c0c0c;
+  height: 90px;
+  padding: 30px 25px;
+}
+
+.trackGuessBox{
+  background-color: chartreuse;
+  height: 46px;
+  width: 50px;
+  margin-right: 7px;
+  box-shadow:  0px 0 20px rgb(0, 134, 134);
+}
+
+.nav--icon {
+  height: 46px;
+  margin-right: 7px;
+}
+
+.box {
+  height: 12.5rem;
+  width:  15%;
+  border: 1px solid black;
+  display: inline-block;
+  margin-bottom: -2px;
+  padding: 0;
+  border-radius: 5px;
+  position: relative;
+  
+}
+
+.boxContainer{
+  position: absolute;
+  margin: 1.5rem 1rem 1.5rem 6rem;
+  top: 5.5rem;
+  z-index: 10;
+  width: 47%;
+
+}
+
+@media screen and (max-width: 1668px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 47%;
+  }
+  .box{    
+    height: 11rem;
+  }
+}
+@media screen and (max-width: 1500px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 5.5rem;
+    width: 47%;
+  }
+  .box{    
+    height: 9.5rem;
+  }
+}
+@media screen and (max-width: 1300px){
+  .boxContainer{    
+    top:4rem;
+    margin: 1.5rem 1.5rem 1.5rem 5rem;
+    width: 47%;
+  }
+  .box{    
+    height: 8.5rem;
+  }
+}
+@media screen and (max-width: 1100px){
+  .boxContainer{    
+    top:3rem;
+    margin: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 47%;
+  }
+  .box{    
+    height: 7rem;
+  }
+}
+@media screen and (max-width: 900px){
+  .boxContainer{    
+    top:2.5rem;
+    margin: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 46%;
+  }
+  .box{    
+    height: 5.6rem;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .content{
+    width: 100%;
+    border-radius: 0;
+  }
+  .pokePic{
+    box-shadow:  10px 10px 5px rgb(0, 134, 134);
+  }
+  .boxContainer{    
+    top:4rem;
+    margin: 1.5rem 1.5rem 1.5rem 4.5rem;
+    width: 95%;
+  }
+  .box{    
+    height: 10rem;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 700px){
+  .boxContainer{    
+    top:3.5rem;
+    margin: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 95%;
+  }
+  .box{    
+    height: 8.8rem;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 600px){
+  .boxContainer{    
+    top:1rem;
+    margin: 1.5rem 1.5rem 1.5rem 5rem;
+    width: 95%;
+  }
+  .box{    
+    height: 8rem;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 550px){
+  .boxContainer{    
+    top:1rem;
+    margin: 1.5rem 1.5rem 1.5rem 4.5rem;
+    width: 95%;
+  }
+  .box{    
+    height: 7.5rem;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 500px){
+  .boxContainer{    
+    top:1rem;
+    margin: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 90%;
+  }
+  .box{    
+    height: 6.rem;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .boxContainer{    
+    top:1rem;
+    margin: 1.5rem 1.5rem 1.5rem 3.5rem;
+    width: 90%;
+  }
+  .box{    
+    height: 6rem;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 390px){
+  .boxContainer{
+    top:1rem;
+    margin: 1.5rem 1.5rem 1.5rem 3rem;
+    width: 90%;
+  }
+  .box{
+    height: 4.6rem;
+    border-radius: 0px;
+  }
+}
+
+
+
+
+
