@@ -53,6 +53,14 @@ input{
   box-shadow: 0 2px 0 rgb(0, 99, 0);
 
 }
+.instructButton{
+  background: rgb(157, 0, 0);
+  box-shadow: 0 5px 0 rgb(99, 0, 0);
+}
+.instructButton:active {
+  box-shadow: 0 2px 0 rgb(99, 0, 0);
+
+}
 .formsAndButtons{
   display: flex;
   flex-flow: column;
@@ -179,6 +187,56 @@ nav {
 
 }
 
+.nodisplay {
+  display: none;
+  scale: 0 
+}
+
+.instructionpage {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5rem 10rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: .1rem;
+}
+
+.instructionContent {
+  display: flex;
+  align-items: top;
+  flex-flow: column;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.X {
+  cursor: pointer;
+  color: rgb(255, 196, 0);
+  font-size: 10rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  text-align: center;
+  transition: transform 0s;
+}
+
+.X:hover {
+  color: red;
+  transform: scale(1.5);
+  /* transform: color(red); */
+}
+p{
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
 @media screen and (max-width: 1668px){
   .boxContainer{    
     top:5rem;
@@ -281,6 +339,7 @@ nav {
     height: 7.5rem;
     border-radius: 0px;
   }
+
 }
 @media screen and (max-width: 500px){
   .boxContainer{    
@@ -291,6 +350,7 @@ nav {
   .box{    
     height: 6.rem;
     border-radius: 0px;
+    border: .1px solid black;
   }
 }
 
@@ -298,22 +358,33 @@ nav {
   .boxContainer{    
     top:1rem;
     margin: 1.5rem 1.5rem 1.5rem 3.5rem;
-    width: 90%;
+    width: 95%;
   }
   .box{    
     height: 6rem;
     border-radius: 0px;
+    border: .1px black;
+  }
+  .instructionpage {
+    margin-right: 2rem;
+    padding: 5rem 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: .1rem;
   }
 }
 @media screen and (max-width: 390px){
   .boxContainer{
     top:1rem;
     margin: 1.5rem 1.5rem 1.5rem 3rem;
-    width: 90%;
+    width: 95%;
   }
   .box{
-    height: 4.6rem;
+    height: 4.8rem;
     border-radius: 0px;
+    border: .1px black;
   }
 }
 

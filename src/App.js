@@ -23,7 +23,7 @@ export default function App() {
 
     // initiate pokemondata as an array
     const [allPokemonData, setAllPokemonData] = React.useState([]);
-
+    
     // initiate  pokemon data object, which will be used to store the api data into a more
     // managable object/state
     let[pokemonDataObject, setPokemonDataObject] = React.useState({
@@ -40,11 +40,14 @@ export default function App() {
     })
 
     let [squares, setSquares] = React.useState(boxes)
+    let [allPokemonNames, setAllPokemonNames] = React.useState([])
     let [guessBoxes, setGuessBoxes] = React.useState(trackGuessBox)
     let [idTracker, setIdTracker] = React.useState()
     let [boxCounter, setBoxCounter] = React.useState({counter:1})
     let [counterCounter, setCounterCounter] = React.useState({counter:1})
-
+    let [instructions, setinstructions] = React.useState(true)
+    console.log(allPokemonNames);
+    // console.log(allPokemonData);
     // this is our fetch for the api data
     const fetchPokemon = async () => {
         try{
@@ -53,7 +56,12 @@ export default function App() {
             const allPokemonData = await Promise.all(
                 rawPokemonAPIData.map((url) => fetch(url).then((res) => res.json()))           
                 ) 
+
             setAllPokemonData(allPokemonData);
+
+            const allPokemonDataNames = 
+            allPokemonData.map((thing, index) => ({ id: index, name: thing.name}))                           
+                setAllPokemonNames(allPokemonDataNames); 
             // turn off loading compnenet
             setLoading(false);
             // console.log(allPokemonData);
@@ -81,7 +89,7 @@ export default function App() {
             match: false,
             idk: false,
             start: true,
-            guessCounter: 0,
+            guessCounter: 1,
         }))
         setSquares(prevSquares => {
             return prevSquares.map((square) => {
@@ -163,6 +171,12 @@ export default function App() {
             return   [...prevValue, id]
         });
     }
+    
+        function toggleInstructions(){
+            setinstructions(previnstructions => previnstructions = previnstructions ? false : true )
+            console.log(instructions);
+}
+console.log(instructions);
 
     const squareElements = squares.map(square => (
         <Box 
@@ -181,19 +195,28 @@ export default function App() {
             on={guessBox.on} 
         />
     ))
+    const style = {
+        display: instructions ?  "inline": "none"
+    }
 
     return (
         // pass pokemondataobject as a parameter into Pokepic under the variable name pokemon data object
         // also run getrandompokemoninfo function through the variable handleClick
         <div className="InfoContainer">
             <div className="content">
-                <PokePic pokemonDataObject={pokemonDataObject}   />
-                <div className="boxContainer">{squareElements}</div>
+                <PokePic 
+                    instructions = {instructions} 
+                    pokemonDataObject={pokemonDataObject}   
+                />
+                <div style={style} className="boxContainer">{squareElements}</div>
                 <Guesses 
                     handleClick= {getRandomPokemonInfo}
                     takeGuess={takeGuess}
                     revealAnswer = {revealAnswer}
                     pokemonDataObject = {pokemonDataObject}
+                    handleInstructions = {toggleInstructions}
+                    instructions = {instructions}
+                    allPokemonNames = {allPokemonNames}
                 />
                 <div className="trackGuessBoxContainer">
                     {guessBoxElements}
@@ -203,7 +226,3 @@ export default function App() {
         </div>
     )
 }
-
-// show how many guesses youve done and how many left
-// hide submit button untill every 3 % = 0 toggles
-// clean up code and pretty

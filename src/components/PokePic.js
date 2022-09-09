@@ -1,16 +1,15 @@
 import React from 'react';
 
-// pokemonData.id
-// pokemonData.name
-// pokemonData.weight
-// pokemonData.type[0]
-// pokemonData.type[1]
-// pokemonData.sprites.front_default
+
 
 export default function PokePic(props) {
 
+const style = {
+    display: props.instructions ?  "flex": "none"
+}
+
     return (
-            <main className="main">
+            <main style={style} className="main">
                 <img className="pokePic" src={props.pokemonDataObject.image} />
                 <div className="pokeNameContainer">
                     {props.pokemonDataObject.match && <h2 className="pokeName">{`CORRECT, THIS IS ${props.pokemonDataObject.name.toUpperCase()}`}</h2>}
