@@ -237,6 +237,61 @@ p{
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 2800px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 50%;
+  }
+  .box{    
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 2600px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 50%;
+  }
+  .box{    
+    height: 18rem;
+  }
+}
+
+@media screen and (max-width: 2400px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 50%;
+  }
+  .box{    
+    height: 16rem;
+  }
+}
+
+@media screen and (max-width: 2000px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 50%;
+  }
+  .box{    
+    height: 14rem;
+  }
+}
+
+@media screen and (max-width: 1800px){
+  .boxContainer{    
+    top:5rem;
+    margin: 1.5rem 1.5rem 1.5rem 6rem;
+    width: 50%;
+  }
+  .box{    
+    height: 13rem;
+  }
+}
+
 @media screen and (max-width: 1668px){
   .boxContainer{    
     top:5rem;

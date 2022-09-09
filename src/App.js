@@ -124,6 +124,12 @@ export default function App() {
         }) : squares
         })
         setSquares(prevSquares => {
+            
+            return prevSquares.map((square) => {
+            return pokemonDataObject.guessCounter === 5 ? {...square, on: false, disabled: true} : square
+        })
+        })
+        setSquares(prevSquares => {
             return prevSquares.map((square) => {
                 return  idTracker.includes(square.id) ?   square:{...square, disabled: false}
             })
